@@ -12,7 +12,7 @@
   <br /><br />
       <h2>{{{title}}}</h2>
 	  <section class="post-meta">
-        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+        {{!--<time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>--}}
       </section>
   </div>
   
@@ -29,26 +29,17 @@
 			</div>
 			<div class="six columns">
 				<section class="post-share">
-					<a class="link twitter" href="http://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"><i class="fa fa-twitter"></i></a>
-					<a class="link facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"><i class="fa fa-facebook"></i></a>
-					<a class="link reddit" href="http://www.reddit.com/submit?url={{url absolute="true"}}"><i class="fa fa-reddit"></i></a>
-					<a class="link hackernews" href="http://news.ycombinator.com/submitlink?u={{url absolute="true"}}"><i class="fa fa-hacker-news"></i></a>          
 				</section>
 			</div>
   <br /><br />
   {{! Everything inside the #author tags pulls data from the author }}
         {{#author}}
-		<div class="row">
-			<div class="two columns">
+        <div class="post-spacer"></div><br />
+        <div class="row align-text-center">
 			<img class="authorimage" src="{{image}}">
-			</div>
-			<div class="four columns">
-			<h4><span class="author-name"><a href="{{url}}">{{name}}</a></span></h4>
-			<span class="author-location"><i class="fa fa-map-marker"></i> {{location}}</span> | <span class="website"><a href="{{website}}">{{website}}</a></span>
-			</div>
-			<div class="six columns">
-			<br /><p>{{bio}}</p>
-			</div>
+            </div>
+		<div class="row">
+			<h4 class="align-text-center"><span class="author-name"><a href="{{url}}">{{name}}</a></span></h4>
 		</div>
         {{/author}}
   <div class="post-spacer"></div><br />

@@ -3,7 +3,7 @@
       <div class="container">
         <ul class="navbar-list" >
 		  {{#foreach navigation}}
-          <li class="navbar-item"><a class="navbar-link" href="{{url absolute="true"}}">{{label}}</a></li>
+          <li class="navbar-item{{#if current}} nav-current{{/if}}"><a class="navbar-link" href="{{url absolute="true"}}">{{label}}</a></li>
 		  {{/foreach}}
         </ul>
       </div>
